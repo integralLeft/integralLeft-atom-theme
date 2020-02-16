@@ -1,0 +1,528 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  background-color: black;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+    .editor {
+        background-color: black;
+    }
+  color: #00ffee;
+  //background-color: hsl(180, 24%, 12%);
+  background-color: black;
+  text-shadow: 0px 0px 15px #00ffee;
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: blue;
+}
+// remove GitHub branding in status bar
+.status-bar {
+    background-color: black;
+  .github-StatusBarTile {
+    display: none;
+  }
+}
+
+// change title bar color
+.title {
+    background-color: black;
+}
+
+/*
+atom-text-editor .syntax--comment { color: #aa00ff; }
+atom-text-editor .syntax--variable { color: #badff7; }
+atom-text-editor .syntax--function { color: #00ffee; font-style: italic;}
+*/
+atom-text-editor .syntax--source { color: #b7c7a3; }
+/*
+atom-text-editor .syntax--link { color: #00ffea; }
+atom-text-editor .syntax--source.syntax--gfm.syntax--link.syntax--entity { color: #ffffff; }
+atom-text-editor .syntax--markup { color: #fffb00; }
+atom-text-editor .syntax--markup.syntax--italic { color: #fffb00; }
+atom-text-editor .syntax--markup.syntax--heading-2 { color: #ff0073; }
+atom-text-editor .syntax--quoted { color: #00ff1a;}
+atom-text-editor .syntax--punctuation.syntax--definition.syntax--string { color: #0099ff; font-style: italic;}
+atom-text-editor .syntax--support.syntax--function.syntax--console { color: #5ce6ca; }
+atom-text-editor .syntax--support.syntax--function.syntax--dom { color: #52a37c; }
+atom-text-editor .syntax--markup.syntax--heading.syntax--marker { color: #ff0073; }
+atom-text-editor .syntax--support.syntax--function { color: red; }
+atom-text-editor .syntax--support.syntax--type.syntax--property-name.syntax--css { color: #52a37c; }
+atom-text-editor .syntax--text.syntax--plain.syntax--null-grammar { color: #43e898; }
+atom-text-editor .syntax--string.syntax--quoted { color: #44d600; }
+atom-text-editor .syntax--entity.syntax--name.syntax--function { color: #ffbeab; }
+atom-text-editor .syntax--keyword.syntax--control { color: #3a8cc2; font-weight: bold;}
+atom-text-editor .syntax--keyword.syntax--operator { color: #00c8ff;}
+atom-text-editor .syntax--constant.syntax--numeric { color: #9661ff; font-weight: bold;}
+atom-text-editor .syntax--variable.syntax--parameter { color: #badff7; }
+*/
+
+.invisible-character.eol {
+    text-shadow: 0px 0px 0px #000000;
+}
+
+.syntax--comment {
+  font-weight: bold;
+  font-style: italic;
+  color: #a1784c;
+  text-shadow: 0px 0px 15px rgba(161, 120, 76, 0.8);
+}
+
+.syntax--string {
+  color: rgba(170, 175, 235, 0.93);
+  text-shadow: 0px 0px 15px rgba(170, 175, 219, 0.8);
+}
+
+.syntax--constant.syntax--numeric {
+  color: rgba(143, 194, 187, 0.73);
+  text-shadow: 0px 0px 15px rgba(119, 194, 187, 0.8);
+}
+
+.syntax--constant.syntax--character, .syntax--constant.syntax--other {
+  color: rgba(34, 255, 153, 0.87);
+  text-shadow: 0px 0px 15px rgba(34, 200, 153, 0.8);
+}
+
+.syntax--constant.syntax--language {
+  color: #bDbe82;
+  text-shadow: 0px 0px 15px rgba(189, 190, 130, 0.8);
+}
+
+.syntax--storage {
+  color: rgba(139, 108, 207, 1);
+  text-shadow: 2px 2px 2px rgba(139, 93, 223, .8);
+  font-weight: bold;
+  // font-style: italic;
+}
+
+.syntax--meta.syntax--function-call {
+  color: rgba(203, 175, 108, 1);
+  text-shadow: 0px 0px 15px rgba(203, 175, 108, 0.8);
+}
+
+.syntax--support.syntax--function {
+  color: #a600bf;
+  text-shadow: 0px 0px 15px rgba(189, 190, 130, 0.8);
+}
+
+.syntax--variable.syntax--other.external-symbol {
+  color: #BBDFDD;
+  text-shadow: 0px 0px 15px rgba(187, 223, 221, 0.8);
+}
+
+.syntax--variable.syntax--language, .syntax--variable.syntax--other {
+  color: #3aafff;
+  text-shadow: 0px 0px 15px rgba(58, 175, 255, 0.8);
+}
+
+.syntax--variable.syntax--parameter {
+  color: #33b6a9;
+  text-shadow: 0px 0px 15px rgba(5, 214, 249, 0.8);
+}
+
+.syntax--keyword {
+  color: #bB7Dbf;
+  text-shadow: 0px 0px 15px rgba(155, 159, 253, 0.8);
+  font-weight: bold;
+}
+
+.syntax--entity {
+  &.syntax--name.syntax--type {
+    color: rgba(175, 119, 169, 0.93);
+    text-shadow: 0px 0px 15px rgba(175, 119, 169, 0.8);
+  }
+
+  &.syntax--name.syntax--class {
+    color: #B998DF;
+    text-shadow: 0px 0px 15px rgba(185, 152, 223, 0.8);
+  }
+
+  &.syntax--name.syntax--structure {
+    color: rgba(34, 255, 153, 0.87);
+    text-shadow: 0px 0px 15px rgba(185, 152, 223, 0.8);
+  }
+
+  &.syntax--name.syntax--tag {
+    color: #49a6d2;
+    text-shadow: 0px 0px 15px rgba(73, 166, 210, 0.8);
+  }
+
+  &.syntax--name.syntax--function {
+    color: rgba(18, 255, 169, 0.97);
+    text-shadow: 0px 0px 15px rgba(34, 255, 169, 0.8);
+  }
+
+  &.syntax--name.syntax--function.syntax--io {
+    color: #DFB3AC;
+    text-shadow: 0px 0px 15px rgba(223, 179, 172, 0.8);
+  }
+
+  &.syntax--name.syntax--function.syntax--misc {
+    color: #E3E4A9;
+    text-shadow: 0px 0px 15px rgba(227, 228, 169, 0.8);
+  }
+
+  &.syntax--name.syntax--function.syntax--predicate {
+    color: #A5DF93;
+    text-shadow: 0px 0px 15px rgba(165, 223, 147, 0.8);
+  }
+
+  &.syntax--other.syntax--attribute-name {
+    color: rgba(73, 134, 194, 0.8);
+    text-shadow: 0px 0px 15px rgba(73, 134, 194, 0.8);
+  }
+}
+
+.syntax--meta.syntax--class, .syntax--entity.syntax--name.syntax--class, .syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #ff4377;
+  text-shadow: 0px 0px 15px rgba(255, 51, 153, 0.8);
+}
+
+.syntax--support.syntax--class {
+  color: rgba(239, 106, 167, 0.87);
+  text-shadow: 0px 0px 15px rgba(239, 106, 167, 0.8);
+}
+
+.syntax--invalid {
+  color: #DFDFD5;
+  text-shadow: 0px 0px 15px #CC1B27;
+}
+
+.syntax--string .syntax--source {
+  font-style: italic;
+  color: rgba(51, 153, 255, 1);
+  text-shadow: 0px 0px 15px rgba(0, 153, 255, 0.8);
+}
+
+.syntax--entity.syntax--name.syntax--tag {
+  color: #49a6d2;
+  text-shadow: 0px 0px 15px rgba(73, 166, 210, 0.8);
+}
+
+.syntax--markup.syntax--heading {
+  font-weight: bold;
+  color: rgba(18, 255, 169, 0.97);
+  text-shadow: 0px 0px 15px rgba(34, 255, 169, 0.8);
+}
+
+.syntax--markup.syntax--italic {
+  font-style: italic;
+  color: #bB7Dbf;
+  text-shadow: 0px 0px 15px rgba(155, 169, 253, 0.8);
+}
+
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+  color: #bB7Dbf;
+  text-shadow: 0px 0px 15px rgba(155, 169, 253, 0.8);
+}
+
+.syntax--markup.syntax--underline {
+  text-decoration: underline;
+  color: rgba(139, 108, 207, 1);
+  text-shadow: 0px 0px 15px rgba(139, 93, 223, 0.8);
+}
+
+.syntax--gfm {
+  .syntax--link .syntax--entity {
+    text-decoration: underline;
+    color: #3aafff;
+    text-shadow: 0px 0px 15px rgba(58, 175, 255, 0.8);
+  }
+}
+
+
+
+
+
+
+#header {
+    color: black;
+}
+
+.tab-bar {
+  background-color: black;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  .tab.active:last-of-type {
+      background-color: black;
+  }
+  .tab.active.sortable {
+      background-color: black;
+  }
+  .tab {
+    color: white;
+    // height: @tab-height;
+    line-height: @tab-height;
+    font-size: @font-size;
+    //border-right: 0px solid black;
+    background-color: black;
+    border-radius: 0px;
+    &.active {
+      color: white;
+      background-color: black;
+      border-width: 0px;
+    }
+
+
+    &.hover {
+      background: darken(black, 10%);
+      border-color: transparent;
+      color: white;
+    }
+    // Modified Icon (the circle) -------------------
+    &.modified:not(:hover) .close-icon {
+      top: 50%;
+      //right: @component-padding + 4px;// 4px -> half of icon size
+      // margin-top: -3px;
+      border-color: black;
+    }
+    &.modified:hover .close-icon {
+      color: currentColor;
+    }
+    // Close Icon (the X) -------------------
+    .close-icon:hover {
+      color: black;
+    }
+    &.active .close-icon:hover {
+      color: white;
+    }
+    // Dragging -------------------
+    // Styles get applied while dragging a tab
+    &.is-dragging {
+      background: darken(black, 10%);
+      border-color: transparent;
+      opacity: .5;
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+
+.tree-view-resizer {
+  border-right: 1px solid black;
+}
+.tree-view {
+  color: white;
+  background-color: black;
+  .list-item.selected {
+    color: white;
+  }
+  .vertical-scrollbar {
+      visibility: hidden;
+  }
+}
+.tree-view .entry::before {
+  margin-left: 12px;
+  margin-right: 12px;
+  background: #06c !important;
+  cursor: pointer;
+}
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+  position: relative;
+  top: 0px;
+  cursor:pointer;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\f0a3";
+  padding-left:5px;
+  padding-right:10px;
+  font-size:1.31em;
+}
+.list-item::before {
+  cursor: pointer !important;
+  display: inline-block;
+  padding-left:8px !important;
+  padding-right:12px !important;
+  font-size:13px !important;
+}
+
+
+atom-text-editor[mini] {
+  padding-left: @component-padding/2;
+  color: white;
+  border-radius: @component-border-radius;
+  background-color: black;
+  border-bottom: 0px solid black;
+  &.is-focused {
+    background-color: darken(black, 5%);
+  }
+  .placeholder-text {
+    color: white;
+  }
+  .selection .region {
+    background-color: black;
+  }
+}
+
+
+// Buttons
+// -------------------
+// Overrides: atom/atom/static/buttons.less
+.btn {
+  color: lighten(white, 6%);
+  background-color: black;
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: black;
+  }
+  &:active {
+    color: fade(white, 66%);
+    background-color: darken(black, 2%);
+  }
+  &.selected {
+    color: white;
+    background-color: black;
+  }
+  &:focus,
+  &:focus:active {
+      background-color: black;
+    outline: none;
+  }
+}
+// Colored buttons -----------------------
+.btn.btn-primary { .btn-color(black); }
+.btn.btn-info    { .btn-color(black); }
+.btn.btn-success { .btn-color(black); }
+.btn.btn-warning { .btn-color(black); }
+.btn.btn-error   { .btn-color(black); }
+.btn-color(black) {
+  color: black;
+  background-color: black;
+  &:hover,
+  &:focus {
+    background-color: lighten(black, 4%);
+  }
+  &:active {
+    background-color: darken(black, 4%);
+  }
+  &.selected {
+    background-color: lighten(black, 4%);
+  }
+  &.selected:focus,
+  &.selected:hover {
+    background-color: lighten(black, 8%);
+  }
+}
+// Button Group -----------------------
+.btn-group > .btn {
+  border-color: hsla(0,0%,0%,.2);
+}
+
+
+// Base
+// -------------------
+// Used for global styles
+// Or to override certain Atom core styles
+// -------------------
+body {
+  font-size: @font-size;
+  color: white;
+  background-color: black;
+}
+atom-pane {
+  border-right: 1px solid black;
+  &:last-child {
+    border-right: none;
+  }
+  background-color: black;
+}
+
+
+// Panels
+// -------------------
+// Overrides: atom/static/panels.less
+.panel-heading {
+  border-bottom: 1px solid black;
+  background-color: black;
+}
+.inset-panel {
+  background-color: black;
+  .panel-heading {
+    background-color: black;
+  }
+}
+.package-card {
+  background-color: #000000 !important;
+}
+// Modal -------------------
+// Used on top of the editor, like the Command Palette.
+atom-panel.modal {
+  border: 1px solid black;
+  border-top: none;
+  box-shadow: none;
+}
+// Styles the thin border left of line numbers. Don't know why we did.
+.atom-dock-resize-handle {
+    cursor: col-resize;
+    border-right: 1px solid black;
+}
+.atom-dock-toggle-button-inner {
+    background-color: black;
+    border: 1px none black;
+    color: white;
+    transition: transform 0.1s ease-out 0s;
+}
+atom-panel i.icon.icon-x, atom-panel i.icon.icon-plus {
+  &:before {
+    color: red; // @x-button;
+  }
+  &:hover {
+    color:red;
+  }
+}
+
+
+// Change the color of the titles
+.settings-view .section {
+  color: white;
+  background-color: black;
+}
+
+.settings-view .config-menu {
+    background-color: black;
+}
+
+.settings-view .headings {
+    background-color: black;
+}
+
+.vertical-scrollbar {
+    visibility: hidden;
+}
+
+.horizontal-scrollbar {
+    visibility: hidden;
+}
+
+.scrollbar-corner {
+    visibility: hidden;
+}
+
+atom-workspace {
+
+    color: black;
+    background-color: black;
+}
